@@ -564,10 +564,14 @@ class KeyboardViewController: UIInputViewController {
         self.backspaceRepeatTimer = nil
     }
     
+    func deleteBackward() {
+        self.textDocumentProxy.deleteBackward()
+    }
+    
     func backspaceDown(_ sender: KeyboardKey) {
         self.cancelBackspaceTimers()
         
-        self.textDocumentProxy.deleteBackward()
+        self.deleteBackward()
         self.updateCapsIfNeeded()
         
         // trigger for subsequent deletes
@@ -586,7 +590,7 @@ class KeyboardViewController: UIInputViewController {
     func backspaceRepeatCallback() {
         self.playKeySound()
         
-        self.textDocumentProxy.deleteBackward()
+        self.deleteBackward()
         self.updateCapsIfNeeded()
     }
     
