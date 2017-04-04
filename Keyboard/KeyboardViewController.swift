@@ -19,6 +19,7 @@ let kAutoCapitalization = "kAutoCapitalization"
 let kPeriodShortcut = "kPeriodShortcut"
 let kKeyboardClicks = "kKeyboardClicks"
 let kSmallLowercase = "kSmallLowercase"
+let kDeleteInput = "kDeleteInput"
 
 class KeyboardViewController: UIInputViewController {
     
@@ -98,7 +99,8 @@ class KeyboardViewController: UIInputViewController {
             kAutoCapitalization: false,
             kPeriodShortcut: true,
             kKeyboardClicks: false,
-            kSmallLowercase: false
+            kSmallLowercase: true,
+            kDeleteInput: true
         ])
         
         self.keyboard = defaultKeyboard()

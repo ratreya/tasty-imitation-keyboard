@@ -33,8 +33,8 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
     var settingsList: [(String, [String])] {
         get {
             return [
-                ("General Settings", [kAutoCapitalization, kPeriodShortcut, kKeyboardClicks]),
-                ("Extra Settings", [kSmallLowercase])
+                ("Lipika Settings", [kDeleteInput]),
+                ("General Settings", [kSmallLowercase, kAutoCapitalization, kPeriodShortcut, kKeyboardClicks])
             ]
         }
     }
@@ -44,7 +44,8 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
                 kAutoCapitalization: "Auto-Capitalization",
                 kPeriodShortcut:  "“.” Shortcut",
                 kKeyboardClicks: "Keyboard Clicks",
-                kSmallLowercase: "Allow Lowercase Key Caps"
+                kSmallLowercase: "Allow Lowercase Key Caps",
+                kDeleteInput: "Backspace Deletes Input"
             ]
         }
     }
@@ -52,7 +53,8 @@ class DefaultSettings: ExtraView, UITableViewDataSource, UITableViewDelegate {
         get {
             return [
                 kKeyboardClicks: "Please note that keyboard clicks will work only if “Allow Full Access” is enabled in the keyboard settings. Unfortunately, this is a limitation of the operating system.",
-                kSmallLowercase: "Changes your key caps to lowercase when Shift is off, making it easier to tell what mode you are in."
+                kSmallLowercase: "Changes your key caps to lowercase when Shift is off, making it easier to tell what mode you are in.",
+                kDeleteInput: "Delete the input and regenerate the ouput rather than delete the output character in target language."
             ]
         }
     }
